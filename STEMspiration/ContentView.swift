@@ -9,13 +9,43 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        ZStack {
+            
+            Color(.systemPurple)
+                .ignoresSafeArea()
+            VStack(alignment: .leading, spacing: 20.0) {
+                       Image("lara_mahal")
+                           .resizable()
+                           .aspectRatio(contentMode: .fit)
+                           .cornerRadius(15)
+                       
+                       
+                       HStack {
+                           
+                           Text("Lara Mahal")
+                                          .multilineTextAlignment(.center)
+                           
+                           Text("Greatest Glycomiscist")
+                               .fontWeight(.bold)
+                       }
+
+                      
+                       Text ("Chemichal scientist and Canida exellence research chair in glycomics at the univeristy of alberta edmonton. professor of chemistry at University Alberta.")
+                       
+                   }
+            .padding()
+            .background(Rectangle()
+                .foregroundColor(.white))
+            .cornerRadius(14)
+            .shadow(radius: 15)
+            .padding()
         }
-        .padding()
+       
+
+        
+       
+        
     }
 }
 
